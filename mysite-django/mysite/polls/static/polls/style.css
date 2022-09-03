@@ -1,0 +1,16 @@
+li a {
+    color: green;
+}
+
+body {
+    background: white url("images/sjouke-op-de-weegh-MuflbOFKGsI-unsplash.jpg") no-repeat;
+    font-size: 1.5rem;
+}
+
+.main-content {
+    width: 10rem;
+    height: auto;
+    background-color: #ddd;
+    padding: 2rem;
+
+}
