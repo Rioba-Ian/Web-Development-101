@@ -1,0 +1,108 @@
+@use './navbar';
+@use './responsive' as responsive;
+@use './colors' as col;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+
+// hero section
+
+.hero {
+    background-color: #fff;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        margin: 0 auto;
+        height: 90vh;
+        z-index: 1;
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 2rem;
+
+        @include responsive.breakpoint-down(small) {
+            grid-template-columns: 1fr;
+            height: 100%;
+        }
+
+        &--left {
+            width: 100%;
+            line-height: 1.2;
+
+            @include responsive.breakpoint-down(small) {
+                padding: 5rem 0;
+                line-height: 1.5;
+            }
+
+        }
+
+        &--left h1 {
+            font-size: 3rem;
+            color: col.$dark-navy-blue;
+
+            @include responsive.breakpoint-down(small) {
+                font-size: 2.5rem;
+                color: col.$dark-navy-blue;
+            }
+        }
+
+        &--left h2 {
+            font-size: 2rem;
+            color: col.$dark-navy-blue;
+
+            @include responsive.breakpoint-down(small) {
+                font-size: 1.5rem;
+                color: col.$dark-navy-blue;
+            }
+        }
+
+        &--left p {
+            font-size: 1.25rem;
+            color: col.$dark-navy-blue;
+
+            @include responsive.breakpoint-down(small) {
+                font-size: 1rem;
+                color: col.$dark-navy-blue;
+            }
+        }
+
+        &--btn {
+            color: col.$dark-navy-blue;
+            text-decoration: none;
+            background-color: col.$megentaish-red;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            outline: none;
+            border-radius: 0.375rem;
+            margin: 1rem 0;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        &--btn:hover {
+            background: black;
+            color: col.$lavender;
+        }
+
+
+        &--btn:visited:hover {
+            background-color: red;
+        }
+
+        &--img {
+            height: 100%;
+            width: 100%;
+        }
+
+
+    }
+
+
+}
